@@ -33,4 +33,9 @@ public class MainSnack {
     }
 
 
+    public static void createSnack(Snack newSnack) {
+        CreateSnackUseCase createSnackUseCase = new CreateSnackUseCase(SnackDataRepository.newInstance());
+        createSnackUseCase.execute(newSnack.id);
+        System.out.println("");
+    }
 }
