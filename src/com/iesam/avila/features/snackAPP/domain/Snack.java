@@ -1,26 +1,29 @@
-package com.iesam.avila.features.tapas.domain;
+package com.iesam.avila.features.snackAPP.domain;
 
 public class Snack {
+    public String id;
     public String nombre;
     public String descripcion;
-    public String establecimiento;
+    public String direccion;
     public String totalPuntos;
     public String numParticipantes;
     public String totalVotos;
     public String ingredientes;
-    public String direccion;
+    public String contacto;
 
 
-    public Snack(String nombre, String descripcion, String establecimiento, String totalPuntos, String numParticipantes, String totalVotos, String ingredientes, String direccion){
+    public Snack(String id, String nombre, String descripcion, String establecimiento, String totalPuntos, String numParticipantes, String totalVotos, String ingredientes, String direccion){
+        this.id=id;
         this.nombre=nombre;
         this.descripcion=descripcion;
-        this.establecimiento=establecimiento;
+        this.direccion=direccion;
         this.totalPuntos=totalPuntos;
         this.numParticipantes=numParticipantes;
         this.totalVotos= totalVotos;
         this.ingredientes=ingredientes;
-        this.direccion=direccion;
+        this.contacto=contacto;
     }
+
 
     public String getNombre() {
         return nombre;
@@ -38,12 +41,12 @@ public class Snack {
         this.descripcion = descripcion;
     }
 
-    public String getEstablecimiento() {
-        return establecimiento;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setEstablecimiento(String establecimiento) {
-        this.establecimiento = establecimiento;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public String getTotalPuntos() {
@@ -78,11 +81,20 @@ public class Snack {
         this.ingredientes = ingredientes;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getContacto() {
+        return contacto;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setContacto(String contacto) {
+        this.contacto = contacto;
+    }
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
